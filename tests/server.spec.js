@@ -48,4 +48,14 @@ describe('server/app.js', function() {
       });
     });
 
+    it('page says hello Alex', (done) => {
+      chai.request(server)
+        .get('/')
+        .end((err, res) => {
+          expect(err).not.exist;
+          expect(JSON.stringify(res.text)).to.contain('Hello Again');
+          done();
+        });
+      });
+
 })
