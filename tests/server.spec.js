@@ -38,17 +38,8 @@ describe('server/app.js', function() {
     });
   });
 
-  it('page says hello Alex', (done) => {
-    chai.request(server)
-      .get('/')
-      .end((err, res) => {
-        expect(err).not.exist;
-        expect(JSON.stringify(res.text)).to.contain('Hello Alex');
-        done();
-      });
-    });
 
-    it('page says hello Alex', (done) => {
+    it('page says hello Again', (done) => {
       chai.request(server)
         .get('/')
         .end((err, res) => {
